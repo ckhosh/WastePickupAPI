@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WFjKiycpRVr9Qx7HXVutVXOBNxOrPnkkZdv9m2BoIqI=",
+  "Source": "WastePickupAPI",
+  "BasePath": "_content/WastePickupAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

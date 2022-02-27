@@ -8,19 +8,25 @@ namespace WastePickupAPI.Controllers
     [ApiController]
     public class DebugController : ControllerBase
     {
+        private readonly ILogger<DebugController> _logger;
+        public DebugController(ILogger<DebugController> logger)
+        {
+            _logger = logger;
+        }
+
         [HttpPost("")]
         public async Task<ActionResult<bool>> AnyTypeOfGetCall([FromBody] Object anyObject)
         {
-            Console.WriteLine("BlankAction Called");
-            Console.WriteLine(anyObject.ToString());
+            _logger.LogInformation("BlankAction Called");
+            _logger.LogInformation(anyObject.ToString());
             return Ok(true);
         }
 
         [HttpPost("{anyAction}")]
         public async Task<ActionResult<bool>> AnyTypeOfGetCalled(string anyAction,[FromBody] Object anyObject)
         {
-            Console.WriteLine("AnyAction Called");
-            Console.WriteLine(anyObject.ToString());
+            _logger.LogInformation("AnyAction Called");
+            _logger.LogInformation(anyObject.ToString());
             return Ok(true);
         }
     }

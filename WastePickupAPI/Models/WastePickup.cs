@@ -20,11 +20,11 @@ namespace WastePickupAPI
         /// <summary>
         /// The date of waste pickup
         /// </summary>
-        public DateTime Date { get;set;}
+        public DateTime Date { get;init;}
 
         /// <summary>
         /// The type of waste pickup
         /// </summary>
-        public EPickupType PickupType { get;set;}
+        public EPickupType PickupType { get;init;}
     }
 }

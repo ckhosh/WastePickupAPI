@@ -17,8 +17,6 @@ namespace WastePickupAPI.Controllers
         [HttpPost("")]
         public async Task<ActionResult<bool>> AnyTypeOfGetCall([FromBody] Object anyObject)
         {
-            _logger.LogCritical("Critical");
-            _logger.LogError("Error");
             _logger.LogInformation("BlankAction Called");
             _logger.LogInformation(anyObject.ToString());
             return Ok(true);
@@ -27,8 +25,6 @@ namespace WastePickupAPI.Controllers
         [HttpPost("{anyAction}")]
         public async Task<ActionResult<bool>> AnyTypeOfGetCalled(string anyAction, [FromBody] Object anyObject)
         {
-            _logger.LogCritical("Critical");
-            _logger.LogError("Error");
             _logger.LogInformation("AnyAction Called");
             _logger.LogInformation(anyObject.ToString());
             return Ok(true);

@@ -8,11 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers().AddJsonOptions(options=> options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+builder.Services.AddLogging();
 builder.Services.AddHttpClient();
+builder.Logging.AddAzureWebAppDiagnostics();
+
 
 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-
 builder.Services.AddSwaggerGen(options => options.IncludeXmlComments(xmlPath));
 
 

@@ -8,6 +8,7 @@ Intended to be used with voice assistants to be able to ask when waste pickups a
 # To do
 * Add more API calls for determining if a pickup is scheduled within a specified timeframe (e.g., next week, next month, etc.)
 
-:heavy_check_mark: Host the web api on Azure.
+:heavy_check_mark: Host the web api on Azure
 
+:heavy_check_mark: Add Azure Logging
 * Secure API with something like OAuth
